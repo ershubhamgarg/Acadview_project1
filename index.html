@@ -34,6 +34,7 @@
 			.s3{
 				color: #1a1f28
 					}
+					
 
 			.shoulder{
 				height:450px; 
@@ -77,6 +78,8 @@
 					}
 
 			.shoulder_heading, .chest_heading, .biceps_heading, .back_heading, .abs_heading{
+				font-family: 'Righteous', cursive;
+
 				color:gray;
 				background-color: black;
 				padding-right: 30px;
@@ -90,28 +93,20 @@
 				transform: scale(1.02);
 					}
 
-			.description{
+			.shoulder_description,.biceps_description,.chest_description,.back_description,.abs_description{
 				opacity: 0.7;
+				visibility: hidden;
 					}
-			.show-description{
-				height: 200px;
-				opacity: 1;
+.showdescription{
+						visibility: visible;
 					}
 
 
 		</style>
 		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-		<script type="text/javascript" src="jquery-3.1.1.js"></script>
-		<script type="text/javascript">
-			$('p').on('click', function(){
-			$(this).toggleClass('show-description');
-		});
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 
-			$('img').on('focus', function(){
-			$('.top_menu').css('background-color','gray');
-		});
-		</script>
 	</head>
 	<body>
 			<div class="top_menu">
@@ -125,11 +120,11 @@
 			<div class="main_container">
 				<div class="shoulder"><p>
 					<strong class="shoulder_heading">Shoulders</strong>
-					<p class="description">That being said, if shoulders are a focus of yours, you can definitely train them twice a week, You can also work them once a week as a separate muscle group and then combine rear delts with back workouts, and medial and front delts with chest for a second session.</p></p>
+					<p class="shoulder_description">That being said, if shoulders are a focus of yours, you can definitely train them twice a week, You can also work them once a week as a separate muscle group and then combine rear delts with back workouts, and medial and front delts with chest for a second session.</p></p>
 				</div>
 			<div class="biceps"><p>
 				<strong class="biceps_heading">Biceps</strong>
-				<p class="description">To build bigger arms, increase your overall muscle mass first by getting stronger and eating a lot.
+				<p class="biceps_description">To build bigger arms, increase your overall muscle mass first by getting stronger and eating a lot.
 				Eat More. Eat every 3 hours. ...
 				GOMAD. Drink 1 gallon of whole milk a day. ...
 				Get Stronger. Increase your Squat to 1.5x your body-weight for at least 1 rep. ...
@@ -139,7 +134,7 @@
 			</div>
 			<div class="chest"><p>
 				<strong class="chest_heading">Chest</strong>
-				<p class="description">
+				<p class="chest_description">
 				Hit these five simple-but-brutally effective moves and build a chiseled chest!
 				Barbell Bench Press. Barbell Bench Press. (3 SETS OF 20, 15, 10 REPS) ...
 				Incline Dumbbell Press. Incline Dumbbell Press. (2 SETS OF 10-12 REPS TO FAILURE) ...
@@ -149,7 +144,7 @@
 			</div>
 			<div class="back"><p>
 				<strong class="back_heading">Back</strong>
-				<p class="description">Pull-ups / Chin-ups. Share. ...
+				<p class="back_description">Pull-ups / Chin-ups. Share. ...
 				Deadlifts. Sumo deadlifts, conventional deadlifts, beyond the range (from a deficit), rack pulls - it doesn't matter, just do them. ...
 				Seated Rows / Bent Over Rows. Seated Rows. ...
 				Back Extensions. ...
@@ -157,7 +152,7 @@
 			</div>
 			<div class="abs"><p>
 				<strong class="abs_heading">Abs</strong>
-				<p class="description">Understand what it means to lose weight. In order to burn fat, you need to use up calories. ...
+				<p class="abs_description">Understand what it means to lose weight. In order to burn fat, you need to use up calories. ...
 				Do cardio workouts. ...
 				Eat smaller meals late at night. ...
 				Eat breakfast. ...
@@ -167,5 +162,23 @@
 				Switch out refined grains for whole grains.</p></p>
 			</div>
 		</div>
+		<script type="text/javascript" src="jquery-3.1.1.js"></script>
+<script type="text/javascript">
+
+	$('document').ready(function(){
+		$('.shoulder_heading').on('click',function(){
+			$('.shoulder_description').toggleClass('showdescription');
+		});$('.biceps_heading').on('click',function(){
+			$('.biceps_description').toggleClass('showdescription');
+		});$('.chest_heading').on('click',function(){
+			$('.chest_description').toggleClass('showdescription');
+		});$('.back_heading').on('click',function(){
+			$('.back_description').toggleClass('showdescription');
+		});$('.abs_heading').on('click',function(){
+			$('.abs_description').toggleClass('showdescription');
+		});
+	});
+</script>
+
 	</body>
 </html>
