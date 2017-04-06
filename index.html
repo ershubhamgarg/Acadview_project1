@@ -6,12 +6,15 @@
 			body{
 				margin:0;
 				background-color: black;
+				width: 100%;
 					}
 			.top_menu{
+text-align: center;
 				box-shadow: 1px 3px 4px #450;
-				background-color:WHITE;
+				background-color:white;
 				height: 100px;
 				border-bottom:5px solid gray;
+				padding: 0 auto;
 					}
 			img{
 				height:inherit;
@@ -94,11 +97,18 @@
 					}
 
 			.shoulder_description,.biceps_description,.chest_description,.back_description,.abs_description{
-				opacity: 0.7;
-				visibility: hidden;
+				opacity: 0;
+				height: 0px;
+			 -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 					}
 .showdescription{
-						visibility: visible;
+	opacity: 1;
+						height: 150px;
+
 					}
 
 
@@ -114,9 +124,7 @@
 				<strong class="s1">Train</strong><strong class="s2">By</strong><strong class="s3">Brain</strong>
 			</div>
 
-			<div class="container_image">
-				<img src="../images/body1.jpg">	
-			</div>
+			
 			<div class="main_container">
 				<div class="shoulder"><p>
 					<strong class="shoulder_heading">Shoulders</strong>
